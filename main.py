@@ -14,8 +14,9 @@ messages = {
              '/help\n'
              '/values\n'
              '/about\n',
-    'help': 'Exchange rate: USD/CHF\n'
-            'Conversion: 20 EUR/BTC',
+    'help': 'Examples:\n\n'
+            'To get exchange rate: USD/CHF\n'
+            'To convert: 20 EUR/BTC',
     'values': 'Supported fiat: USD, EUR, GBP, CHF, RUB\n'
               'Supported crypto: BTC, ETH, LTC, DOGE\n\n'
               'Full list: https://coingate.com/supported-currencies',
