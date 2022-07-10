@@ -8,9 +8,8 @@ import logging
 
 
 # Setup Logger
-logging.basicConfig(filename=config['logfile'], encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename=config['logfile'], encoding='utf-8', level=logging.INFO)
 logger = logging.getLogger('CurrencyBot')
-
 
 
 # Setup Redis Cache
