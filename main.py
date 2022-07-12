@@ -62,7 +62,7 @@ def conv(message):
     logger.debug(message.text)
     # Split input not only by space but also by: / \ , | and newline
     # make list excluding empty elements
-    symbols = [s for s in re.split(r'[\s\n|\\/]', message.text.replace(',', '.')) if s]
+    symbols = [s for s in re.split(r'[\s\n|\\/]', message.text.upper().replace(',', '.')) if s]
 
     # If only two symbols and no amount, assume user wanted just exchange rate
     if len(symbols) <= 2:
@@ -83,7 +83,7 @@ def conv(message):
         logger.error(f'Unknown error -- {e}')
         reply = 'Unknown error'
     else:
-        reply = f'{rate}'
+        reply = f'{symbols[0]} {symbols[1]} = {rate} {symbols[2]}'
         logger.debug(f'Conv rate: {reply}')
 
     bot.reply_to(message, reply)

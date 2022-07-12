@@ -60,4 +60,5 @@ class Converter:
     @staticmethod
     def get_conv(amount=1.0, from_sym='USD', to_sym='EUR'):
         """Multiply Conversion rate on amount"""
-        return abs(float(amount)) * Converter.get_rate(from_sym, to_sym)
+        result = abs(float(amount)) * Converter.get_rate(from_sym, to_sym)
+        return round(result, 3)
