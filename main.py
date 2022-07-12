@@ -71,7 +71,7 @@ def conv(message):
     try:
         rate = Converter.get_conv(*symbols)
     except ConvertError as e:
-        logger.error(f'Convertion Error -- {e}')
+        logger.error(f'Conversion Error -- {e}')
         reply = 'Unable to convert'
     except NetworkFetchError as e:
         logger.error(f'Remote API failure -- {e}')
