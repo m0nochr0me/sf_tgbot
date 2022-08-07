@@ -33,26 +33,27 @@ bot = telebot.TeleBot(config['token'], parse_mode=None)
 
 
 # Register handlers
+
 @bot.message_handler(commands=['start'])
-def send_welcome(message):
+def send_start_message(message):
     bot.reply_to(message, messages['start'].format(name=message.from_user.first_name))
     logger.info(f'Received /start from {message.from_user}')
 
 
 @bot.message_handler(commands=['help'])
-def send_welcome(message):
+def send_help_message(message):
     bot.reply_to(message, messages['help'])
     logger.info(f'Received /help from {message.from_user}')
 
 
 @bot.message_handler(commands=['values'])
-def send_welcome(message):
+def send_values_message(message):
     bot.reply_to(message, messages['values'])
     logger.info(f'Received /values from {message.from_user}')
 
 
 @bot.message_handler(commands=['about'])
-def send_welcome(message):
+def send_about_message(message):
     bot.reply_to(message, messages['about'])
     logger.info(f'Received /about from {message.from_user}')
 
